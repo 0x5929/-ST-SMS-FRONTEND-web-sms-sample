@@ -136,7 +136,6 @@ function useFilter(results, setRecords) {
         setFilterFn({
             fn: items => {
 
-                console.log('items: ', items)
                 if (target === ''){
                     return items;
                 }
