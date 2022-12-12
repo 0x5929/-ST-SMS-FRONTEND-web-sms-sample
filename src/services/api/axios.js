@@ -9,9 +9,6 @@
 
 import axios from 'axios'
 
-console.log('process.env.NODE_ENV: ', process.env.NODE_ENV)
-console.log('process.env.REACT_APP_BACKEND_SERVER_URL: ', process.env.REACT_APP_BACKEND_SERVER_URL)
-
 
 let BASE_URL
 
