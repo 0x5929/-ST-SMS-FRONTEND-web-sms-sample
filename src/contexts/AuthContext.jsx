@@ -19,7 +19,9 @@ const AuthContextProvider = ({ children }) => {
         try {
             const data = await axioService.authenticationPOST(creds)
             const accessToken = data.access_token
-
+            
+            console.log('accessToken: ', accessToken)
+            
             setAuthed(true)
             setUser({ user: creds.email, accessToken: accessToken })
             notificationHandlers.handleOpenNotification('Logged in', 'success')
