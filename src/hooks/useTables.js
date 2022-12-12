@@ -35,6 +35,8 @@ export default function useQueryResultTable(userFeedbackObj, results) {
             console.error(err)
             setRecordForView(null)
         }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
@@ -62,11 +64,11 @@ export default function useQueryResultTable(userFeedbackObj, results) {
         confirmDialogHandlers.handleUnconfirmed()
 
         try {
-            var responseData
+
             const progressResponse = await handleSetProgressStatus({progressState: true})
 
             if (progressResponse) {
-                responseData = await handleSetProgressStatus({callback: deleteAction, callbackArgs: [record], progressState: false})
+                await handleSetProgressStatus({callback: deleteAction, callbackArgs: [record], progressState: false})
             }
             else {
                 throw new Error('error in setting progress')
@@ -88,6 +90,8 @@ export default function useQueryResultTable(userFeedbackObj, results) {
             'This operation cannot be undone, so you must be sure.',
             ()=> (_handleDelete(record)))
         
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
   
@@ -160,6 +164,8 @@ function useFilter(results, setRecords) {
     const handleClear = useCallback((records) => {
         textInput.current.value = ''
         setRecords([...records])
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const filterStates = { textInput }
@@ -257,6 +263,8 @@ function usePagination(records) {
         // we only want the records that 
         // (lets say starts from page 0 and 5 rows per page, so formula equals to 0, and end index to be 1 * 5, so 5, so only so records[0] to records[4])
         return recordsTobePaged.slice(page * rowsPerPage, (page + 1) * rowsPerPage)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pages, rowsPerPage])
 
     const paginationStates = { pages, page, rowsPerPage }
