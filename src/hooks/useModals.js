@@ -37,6 +37,8 @@ export function useEditModal ({setRecordForEdit, setRecords, userFeedbackObj, re
 
             return currentRecords
         })
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [setRecordForEdit, studentFormHandlers, studentFormStates.inputRefs])
 
 
@@ -76,6 +78,8 @@ export function useDetailedViewModal ({ setRecordForView, recordForView }){
     const handleDetailedViewModalClose = useCallback(()=> {
         setRecordForView(null)
         setIsDetailedViewModalOpen(false)
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [setRecordForView])
 
 
@@ -84,6 +88,8 @@ export function useDetailedViewModal ({ setRecordForView, recordForView }){
 
     useEffect(() => {
         if (recordForView) setIsDetailedViewModalOpen(true)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [recordForView])
     
     return [detailedViewModalStates, detailedViewModalHandlers] 
