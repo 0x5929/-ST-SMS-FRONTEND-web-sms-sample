@@ -64,11 +64,12 @@ function ProgramForm({ validations, studentFormStates, studentFormHandlers, ...o
                     errorHandler={validations.rotation}
                     handleChange={handleRotationChange}
                     showError={showError}    
+                    disabled={recordForEdit ? true : false}
 
                     data-testid="rotation-select"                
                 />
                 {
-                    course && 
+                    (course && !recordForEdit) && 
                     
                     <Styles.AddRotBtn 
                         size="medium" 
