@@ -1,6 +1,6 @@
 # This project was created using [Create React App](https://github.com/facebook/create-react-app).
 
-This is a sample project repo for demonstration and portfolio purpose, for original repo please [see](https://github.com/0x5929/ST-SMS-FRONTEND-web-sms/).
+This is a sample project repo for demonstration and portfolio purpose, for original repo please [see](https://github.com/0x5929/ST-SMS-FRONTEND-web-sms/). [Frontend UI](https://sms.kevinlovestocode.dev/), please DM project owner for credentials.
 
 ## Purpose
 
